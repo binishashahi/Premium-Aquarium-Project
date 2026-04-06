@@ -1,108 +1,56 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Aquarium World</title>
-    <link href="https://fonts.googleapis.com/css2?family=Roboto&display=swap" rel="stylesheet">
-    <style>
-        body {
-            font-family: 'Roboto', sans-serif;
-            margin: 0;
-            background: #e0f7fa;
-            color: #333;
-        }
-        header, footer {
-            background: #0077b6;
-            color: white;
-            text-align: center;
-            padding: 20px;
-        }
-        .container {
-            width: 90%;
-            max-width: 1200px;
-            margin: 30px auto;
-        }
-        .section {
-            background: white;
-            padding: 20px;
-            border-radius: 12px;
-            margin-bottom: 20px;
-            box-shadow: 0 6px 15px rgba(0,0,0,0.1);
-        }
-        .faq-item {
-            margin-bottom: 15px;
-        }
-        .faq-item h3 {
-            cursor: pointer;
-            margin-bottom: 5px;
-        }
-        .faq-item p {
-            display: none;
-            padding-left: 10px;
-        }
-        iframe {
-            width: 100%;
-            height: 400px;
-            border: none;
-            border-radius: 12px;
-        }
-        @media(max-width:768px){
-            iframe { height: 300px; }
-        }
-    </style>
-</head>
-<body>
+<!-- Contact Section -->
+<section id="contact" style="padding: 50px 20px; background-color: #f0f8ff;">
+  <h2 style="text-align:center; margin-bottom: 30px;">Contact Us</h2>
 
-<header>
-    <h1>Aquarium World</h1>
-    <p>Your guide to beautiful aquariums</p>
-</header>
+  <div style="display: flex; flex-wrap: wrap; justify-content: space-around; gap: 20px;">
+    
+    <!-- Contact Section -->
+<section id="contact" style="padding: 50px 20px; background-color: #f0f8ff;">
+  <h2 style="text-align:center; margin-bottom: 30px;">Contact Us</h2>
 
-<div class="container">
+  <div style="max-width:600px; margin:auto;">
+    <form style="display:flex; flex-direction:column; gap:15px;">
+      <input type="text" name="name" placeholder="Your Name" required style="padding:10px; width:100%;">
+      <input type="email" name="email" placeholder="Your Email" required style="padding:10px; width:100%;">
+      <textarea name="message" rows="5" placeholder="Your Message" required style="padding:10px; width:100%;"></textarea>
+      <button type="submit" style="padding:10px; background-color:#007BFF; color:white; border:none; cursor:pointer;">
+        Send Message
+      </button>
+    </form>
+  </div>
+</section>
 
-    <!-- FAQ Section -->
-    <div class="section">
-        <h2>Frequently Asked Questions</h2>
-        <div class="faq-item">
-            <h3>1. How do I choose the right aquarium size?</h3>
-            <p>Consider the number and size of fish, space available, and maintenance capability.</p>
-        </div>
-        <div class="faq-item">
-            <h3>2. How often should I clean the aquarium?</h3>
-            <p>Partial water changes should be done weekly, and full cleaning monthly depending on tank size.</p>
-        </div>
-        <div class="faq-item">
-            <h3>3. What fish are best for beginners?</h3>
-            <p>Betta fish, guppies, and goldfish are popular beginner-friendly fish.</p>
-        </div>
+    <!-- Google Map -->
+    <div style="flex: 1 1 300px; max-width: 500px;">
+      <iframe 
+        src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3532.441563768632!2d85.3139533!3d27.7172458!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x39eb1909fa1c0b2b%3A0x4f4a80f58b928e2f!2sKathmandu%2C%20Nepal!5e0!3m2!1sen!2sus!4v1687984356758!5m2!1sen!2sus" 
+        width="100%" 
+        height="350" 
+        style="border:0;" 
+        allowfullscreen="" 
+        loading="lazy" 
+        referrerpolicy="no-referrer-when-downgrade">
+      </iframe>
     </div>
 
-    <!-- Google Map Section -->
-    <div class="section">
-        <h2>Visit Our Store</h2>
-        <iframe 
-            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2381.243158540872!2d-2.2743131841765747!3d53.48960007998386!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x487bb1d6e27e86f3%3A0x6e52ad72b45a7e0!2s26%20Cobden%20St%2C%20Salford%20M6%206WF%2C%20UK!5e0!3m2!1sen!2snp!4v1697634696036!5m2!1sen!2snp" 
-            allowfullscreen="" loading="lazy">
-        </iframe>
-    </div>
+  </div>
+</section>
 
-</div>
-
-<footer>
-    &copy; 2026 Aquarium World | All Rights Reserved
-</footer>
-
-<script>
-    // FAQ toggle
-    const faqs = document.querySelectorAll('.faq-item h3');
-    faqs.forEach(faq => {
-        faq.addEventListener('click', () => {
-            const p = faq.nextElementSibling;
-            p.style.display = p.style.display === 'block' ? 'none' : 'block';
-        });
-    });
-</script>
-
-</body>
-</html>
+<!-- FAQ Section -->
+<section id="faq" style="padding:50px 20px;">
+  <h2 style="text-align:center; margin-bottom:30px;">Frequently Asked Questions</h2>
+  <div style="max-width:800px; margin:auto;">
+    <details style="margin-bottom:10px;">
+      <summary>What types of aquariums do you offer?</summary>
+      <p>We offer freshwater, saltwater, and planted aquariums of various sizes.</p>
+    </details>
+    <details style="margin-bottom:10px;">
+      <summary>Do you deliver and install aquariums?</summary>
+      <p>Yes, we provide delivery and professional installation services.</p>
+    </details>
+    <details style="margin-bottom:10px;">
+      <summary>Can I schedule a consultation?</summary>
+      <p>Absolutely! Use the contact form above to request a consultation.</p>
+    </details>
+  </div>
+</section>
